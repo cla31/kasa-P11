@@ -1,0 +1,33 @@
+.apropos .dropdown {
+    width: 70%;
+    margin-top: 15px;
+    margin-left: 15%;
+    margin-bottom: 10px;
+}
+
+.apropos .titre-dropdown {
+    width: 100%;
+}
+
+.apropos .dropdown p {
+    height: auto;
+    padding: 10px 30px 10px 30px;
+    width: 100%;
+    font-size: 18px;
+    color: var(--rouge);
+    background-color: var(--grisclair);
+}
+
+@media screen and (max-width:375px) {
+    .apropos {
+        width: 90%;
+    }
+    .apropos .dropdown {
+        width: 100%;
+        margin-left: 20px;
+        margin-top: 15px;
+    }
+    .apropos .dropdown p {
+        font-size: 12px;
+    }
+}
