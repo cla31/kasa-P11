@@ -18,34 +18,28 @@ function Dropdown({ title, text }) {
 
   //Par défaut le dropdown est fermé
   //Si il est ouvert, on a le text, sinon on a juste le titre et l'image
-  if (dropdownOpen === true)
-    return (
-      <div className="dropdown">
-        <div className="titre-dropdown">
-          <h3>{title}</h3>
+
+  return (
+    <div className="dropdown">
+      <div className="titre-dropdown">
+        <h3>{title}</h3>
+        <img
+          src={arrowopen}
+          alt="Contenu visible"
+          onClick={() => setDropdown(true)}
+        />
+        {dropdownOpen && (
           <img
             src={arrowclose}
             alt="Contenu invisible"
             onClick={() => setDropdown(false)}
           />
-        </div>
-        {console.log('typeof text', typeof text)}
-        {typeof text === 'object' ? tabEquipement(text) : <p>{text}</p>}
+        )}
       </div>
-    )
-  else
-    return (
-      <div className="dropdown">
-        <div className="titre-dropdown">
-          <h3>{title}</h3>
-          <img
-            src={arrowopen}
-            alt="Contenu visible"
-            onClick={() => setDropdown(true)}
-          />
-        </div>
-      </div>
-    )
+      {dropdownOpen &&
+        (typeof text === 'object' ? tabEquipement(text) : <p>{text}</p>)}
+    </div>
+  )
 }
 
 function tabEquipement(tab) {

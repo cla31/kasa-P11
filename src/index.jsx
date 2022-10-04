@@ -1,22 +1,28 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import ReactDOM from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './index.css'
 import Apropos from './Pages/Apropos'
 import Home from './Pages/Home'
 import Logement from './Pages/Logements'
 import Page404 from './Pages/Page404'
+import Header from './Components/Header'
+import Footer from './Components/Footer'
 
 //C'est ici qu'on met le routeur
 
-ReactDOM.render(
+//pour éviter le warning dans la console
+const root = ReactDOM.createRoot(document.getElementById('root'))
+
+root.render(
   <BrowserRouter>
+    <Header />
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/Logement/:logementId" element={<Logement />} />
       <Route path="/Apropos" element={<Apropos />} />
       <Route path="*" element={<Page404 />} />
     </Routes>
-  </BrowserRouter>,
-  document.getElementById('root')
+    <Footer />
+  </BrowserRouter>
 )

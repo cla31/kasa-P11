@@ -4,10 +4,8 @@ import { useParams } from 'react-router-dom'
 import { getLogementById } from '../Services/Services'
 import Tag from '../Components/Tag'
 import Carroussel from '../Components/Carroussel'
-import Header from '../Components/Header'
 import Page404 from '../Pages/Page404'
 import Dropdown from '../Components/Dropdown'
-import Footer from '../Components/Footer'
 
 function Logement() {
   const { logementId } = useParams()
@@ -25,7 +23,6 @@ function Logement() {
   else
     return (
       <div className="ficheLogement">
-        <Header />
         <div className="navig">
           <Carroussel pictures={ficheLogement.pictures} />
         </div>
@@ -61,7 +58,6 @@ function Logement() {
             <Dropdown title="Équipements" text={ficheLogement.equipments} />
           </div>
         </div>
-        <Footer />
       </div>
     )
 }
