@@ -1,55 +1,62 @@
 import React from 'react'
-import arrowclose from '../Assets/arrow_close.png'
-import arrowopen from '../Assets/arrow_open.png'
+import arrow from '../Assets/arrow.svg'
 import '../Style/Dropdown.css'
 import { useState } from 'react'
 
-function Dropdown({ title, text }) {
+function Dropdown({ title, text, tab }) {
   const [dropdownOpen, setDropdown] = useState(false)
 
-  //On rajoute la classe en plus de l'existante selon condition
-  //Qui vérifie qu'il y a bien la classe.
-  // let dropDownClass = ''
-  // if (extraClass === true) dropDownClass = 'dropdown ' + extraClass
-  // else dropDownClass = 'dropdown'
-
-  //Mais a t-on vraiment besoin d'une condition?
-  // let dropDownClass = 'dropdown '
-
-  //Par défaut le dropdown est fermé
-  //Si il est ouvert, on a le text, sinon on a juste le titre et l'image
+  //Si le dropdown est ouvert on fait tourner arrow
+  let classArrow = ''
+  if (dropdownOpen === true) {
+    classArrow = 'arrowOpen'
+  }
 
   return (
     <div className="dropdown">
-      <div className="titre-dropdown">
+      <div
+        className="titre-dropdown"
+        onClick={() => {
+          setDropdown(dropdownOpen === false)
+        }}
+      >
         <h3>{title}</h3>
         <img
-          src={arrowopen}
+          className={classArrow}
+          src={arrow}
           alt="Contenu visible"
           onClick={() => setDropdown(true)}
         />
-        {dropdownOpen && (
-          <img
-            src={arrowclose}
-            alt="Contenu invisible"
-            onClick={() => setDropdown(false)}
-          />
-        )}
       </div>
+      {/* {console.log('', typeof text)}
       {dropdownOpen &&
-        (typeof text === 'object' ? tabEquipement(text) : <p>{text}</p>)}
+        (typeof text === 'object' ? tabEquipement(text) : <p>{text}</p>)} */}
+      {dropdownOpen && <div className="paragraphe">{text}</div>}
+      {/* {dropdownOpen &&
+        { text }.map((elt) => (
+          <ul>
+            <li>{elt}</li>{' '}
+          </ul>
+        ))} */}
     </div>
   )
 }
 
-function tabEquipement(tab) {
-  return (
-    <ul>
-      {tab.map((equipment, index) => (
-        <li key={index}>{equipment}</li>
-      ))}
-    </ul>
-  )
-}
+// {dropdownOpen &&
+//   { text }.map((elt) => (
+//     <ul>
+//       <li>{elt}</li>{' '}
+//     </ul>
+//   ))}
+
+// function tabEquipement(tab) {
+//   return (
+//     <ul>
+//       {tab.map((equipment, index) => (
+//         <li key={index}>{equipment}</li>
+//       ))}
+//     </ul>
+//   )
+// }
 
 export default Dropdown

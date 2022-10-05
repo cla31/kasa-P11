@@ -10,6 +10,10 @@
     border-radius: 5px;
 }
 
+.arrowOpen {
+    transform: rotate(180deg);
+}
+
 .titre-dropdown h3 {
     font-size: 18px;
     color: var(--blanc);
@@ -22,9 +26,26 @@
     margin-right: 10px;
 }
 
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    .titre-dropdown {
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 376px) and (max-width: 768px) {
+    .titre-dropdown {
+        width: 90%;
+    }
+}
+
 @media screen and (max-width:375px) {
+    /* .dropdown {
+        width: 80%;
+    } */
     .titre-dropdown {
         height: 30px;
+        /* width: 80%; */
+        width: 95%;
     }
     .titre-dropdown h3 {
         font-size: 13px;
