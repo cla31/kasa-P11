@@ -1,5 +1,5 @@
 import React from 'react'
-import '../Style/Tag.css'
+import '../Style/Components/Tag.css'
 
 function Tag({ tagsNom }) {
   return <p className="tag">{tagsNom}</p>

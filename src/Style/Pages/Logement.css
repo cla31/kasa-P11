@@ -226,7 +226,7 @@
     }
     .contentLogement {
         width: 90%;
-        /* border: 2px solid blue; */
+        border: 2px solid blue;
         margin-left: 30px;
     }
     .titre-nom {
@@ -320,7 +320,7 @@
     }
     .contentLogement {
         width: 90%;
-        /* border: 2px solid blue; */
+        border: 2px solid blue;
         margin-left: 20px;
     }
     .titre-nom {
@@ -352,7 +352,7 @@
     }
     .rating {
         /* border: 2px solid blue; */
-        margin-top: 20px;
+        margin-top: 40px;
     }
     .nom {
         position: absolute;

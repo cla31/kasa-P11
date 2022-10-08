@@ -1,6 +1,7 @@
 import React from 'react'
 import likeStar from '../Assets/likeStar.png'
 import greyStar from '../Assets/greyStar.png'
+import '../Style/Components/Rating.css'
 
 function Rating({ stars }) {
   const totalStars = [1, 2, 3, 4, 5]

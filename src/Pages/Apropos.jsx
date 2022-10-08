@@ -2,7 +2,7 @@ import React from 'react'
 import Banniere from '../Components/Banniere'
 import Photo from '../Assets/banniere_page.png'
 import Dropdown from '../Components/Dropdown'
-import '../Style/Apropos.css'
+import '../Style/Pages/Apropos.css'
 
 export default function Apropos() {
   return (

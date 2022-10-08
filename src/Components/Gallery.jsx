@@ -1,5 +1,5 @@
 import React from 'react'
-import '../Style/Gallery.css'
+import '../Style/Components/Gallery.css'
 
 const Gallery = ({ title, cover }) => {
   //Quand on met des brakets on lui dit d'interpréter une variable

@@ -1,6 +1,6 @@
-import React from "react";
-import logoFooter from "../Assets/logo_footer.png";
-import "../Style/Footer.css";
+import React from 'react'
+import logoFooter from '../Assets/logo_footer.png'
+import '../Style/Components/Footer.css'
 
 function Footer() {
   return (
@@ -8,7 +8,7 @@ function Footer() {
       <img src={logoFooter} alt="logo en noir" />
       <p> © 2020 Kasa. All rights reserved</p>
     </footer>
-  );
+  )
 }
 
-export default Footer;
+export default Footer

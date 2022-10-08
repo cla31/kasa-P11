@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import '../Style/Carroussel.css'
+import '../Style/Components/Carroussel.css'
 import suivant from '../Assets/suivant.png'
 import precedent from '../Assets/precedent.png'
 
@@ -8,8 +8,8 @@ function Carroussel({ pictures }) {
   //pictures.length = 6 photos par expl
   //photo 1 = index 0
   const [index, setIndex] = useState(0)
-  console.log('index', index)
-  console.log('pictures.lenght', pictures.length)
+  // console.log('index', index)
+  // console.log('pictures.lenght', pictures.length)
   function next() {
     if (index === pictures.length - 1) {
       setIndex(0)

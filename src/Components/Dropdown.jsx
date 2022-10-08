@@ -1,6 +1,6 @@
 import React from 'react'
 import arrow from '../Assets/arrow.svg'
-import '../Style/Dropdown.css'
+import '../Style/Components/Dropdown.css'
 import { useState } from 'react'
 
 function Dropdown({ title, text, tab }) {

@@ -1,12 +1,24 @@
-import React from 'react'
-import '../Style/Home.css'
+import React, { useEffect, useState } from 'react'
+import '../Style/Pages/Home.css'
 import Gallery from '../Components/Gallery'
 import Banniere from '../Components/Banniere'
 import Photo from '../Assets/banniere_accueil.png'
-import { getDatasLogements } from '../Services/Services'
 import { Link } from 'react-router-dom'
+import Appartements from '../Services/appartementsService.js'
 
 const Home = () => {
+  const [datas, setDatas] = useState(null)
+  const [isLoading, setIsloading] = useState(true)
+  useEffect(() => {
+    const getAllApparts = async () => {
+      const gallery = await Appartements()
+      setDatas(gallery)
+      // console.log('Gallerie', Gallery)
+    }
+    getAllApparts()
+    setIsloading(false)
+  }, [])
+
   return (
     <div className="Home">
       <Banniere
@@ -16,18 +28,8 @@ const Home = () => {
           "Photo de la bannière en page d'accueil, vagues et criques sauvages"
         }
       />
-      <div className="GalleryLogements">
-        {/* Mapping du json */}
-        {/* {logements.map((logement, index) => {
-          return (
-            <Gallery
-              key={index}
-              title={logement.title}
-              cover={logement.cover}
-            ></Gallery>
-          );
-        })} */}
-        {/* Mapping avec la destructuration */}
+
+      {/* <div className="GalleryLogements">    
         {getDatasLogements().map(({ title, cover, id }) => {
           return (
             <Link to={`/logement/${id}`} key={id}>
@@ -35,19 +37,17 @@ const Home = () => {
             </Link>
           )
         })}
-        {/* {getDatasLogements().map((logement) => (
-          <Link to={`/Logements/${logement.id}`} key={logement.id}>
-            <Gallery
-              cover={logement.cover}
-              title={logement.title}
-              id={logement.id}
-            />
-          </Link>
-        ))} */}
-
-        {/* {await getDatas.map(({ title, cover }, index) => {
-          return <Gallery key={index} title={title} cover={cover}></Gallery>
-        })} */}
+      </div> */}
+      <div className="GalleryLogements">
+        {isLoading
+          ? 'Loading...'
+          : datas?.map(({ title, cover, id }) => {
+              return (
+                <Link to={`/logement/${id}`} key={`${title}-${id}`}>
+                  <Gallery title={title} cover={cover}></Gallery>
+                </Link>
+              )
+            })}
       </div>
     </div>
   )

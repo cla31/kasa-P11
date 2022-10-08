@@ -1,6 +1,5 @@
 import React from 'react'
-import '../Style/Banniere.css'
-import '../Style/Footer.css'
+import '../Style/Components/Banniere.css'
 
 function Banniere({ photo, title, description }) {
   return (
