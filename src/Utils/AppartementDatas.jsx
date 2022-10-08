@@ -1,4 +1,21 @@
+/**
+ * Classe pour créer un objet appartement
+ */
+
 class AppartementDatas {
+  /**
+   * Paramètres destructurés
+   * @param {string} id
+   * @param {string} cover
+   * @param {string} title
+   * @param {string} description
+   * @param {array} equipments
+   * @param {object} host
+   * @param {string} location
+   * @param {array} pictures
+   * @param {number} rating
+   * @param {array} tags
+   */
   constructor({
     id,
     cover,

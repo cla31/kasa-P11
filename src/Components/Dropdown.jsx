@@ -4,6 +4,12 @@ import '../Style/Components/Dropdown.css'
 import { useState } from 'react'
 import PropTypes from 'prop-types'
 
+/**
+ * Composant Dropdown avec titre, texte, ouverture au click sur la flèche
+ * @param {String} [Props.text='']
+ * @param {String} [Props.title='']
+ * @returns {JSX.Element} Composant Dropdown
+ */
 function Dropdown({ title, text }) {
   const [dropdownOpen, setDropdown] = useState(false)
 

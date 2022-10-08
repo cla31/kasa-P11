@@ -6,6 +6,12 @@ import Photo from '../Assets/banniere_accueil.png'
 import { Link } from 'react-router-dom'
 import Appartements from '../Services/appartementsService.js'
 
+/**
+ * Page d'accueil (Home) appelant les composants Banniere et Gallery dans un template HTML
+ *
+ * @returns {JSX.Element} Composant Home
+ */
+
 const Home = () => {
   const [datas, setDatas] = useState(null)
   const [isLoading, setIsloading] = useState(true)

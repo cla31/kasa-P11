@@ -1,3 +1,8 @@
+/**
+ * Récupération des données du fichier json
+ * @returns un tableau avec les données de tous les appartements
+ */
+
 export async function getDatasLogements() {
     try {
         const fetchJson = await fetch('/logements.json', {

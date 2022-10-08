@@ -4,6 +4,11 @@ import Photo from '../Assets/banniere_page.png'
 import Dropdown from '../Components/Dropdown'
 import '../Style/Pages/Apropos.css'
 
+/**
+ * Page A propos appelant les composants Banniere et Dropdown dans un template HTML
+ *
+ * @returns {JSX.Element} Composant Apropos
+ */
 export default function Apropos() {
   return (
     <div>

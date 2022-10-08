@@ -7,6 +7,12 @@ import Dropdown from '../Components/Dropdown'
 import Rating from '../Components/Rating'
 import Appartement from '../Services/appartementsService'
 
+/**
+ * Page détails d'un logement cliqué sur la page d'accueil
+ *  appelle les composants Carroussel, Tag, Rating, Dropdown dans un template HTML
+ * @returns {JSX.Element} Composant Logement
+ */
+
 function Logement() {
   const { logementId } = useParams()
   // console.log('id du logement', logementId)

@@ -4,6 +4,12 @@ import suivant from '../Assets/suivant.png'
 import precedent from '../Assets/precedent.png'
 import PropTypes from 'prop-types'
 
+/**
+ * Composant carrousel avec navigation et compteur d'images
+ * @param {string[]} [Props.pictures=[""]]
+ * @returns {JSX.Element} Composant Carroussel
+ */
+
 function Carroussel({ pictures }) {
   //L'index est à 0
   //pictures.length = 6 photos par expl

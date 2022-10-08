@@ -1,7 +1,13 @@
 import React from 'react'
 import '../Style/Components/Banniere.css'
 import PropTypes from 'prop-types'
-
+/**
+ * Création du composant Banniere
+ * @param {String} [props.photos='']
+ * @param {String} [props.title='']
+ * @param {String} [props.description='']
+ * @returns {JSX.Element} Composant Banniere
+ */
 function Banniere({ photo, title, description }) {
   return (
     <div className="banniere">

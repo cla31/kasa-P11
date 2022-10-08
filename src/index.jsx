@@ -9,8 +9,14 @@ import Page404 from './Pages/Page404'
 import Header from './Components/Header'
 import Footer from './Components/Footer'
 
+/**
+ *
+ * fichier racine du projet
+ * contenant le router du projet avec des chemins vers les pages de l'application
+ * les composants Header et Footer
+ * @author Claire M
+ */
 //C'est ici qu'on met le routeur
-
 //pour éviter le warning dans la console
 const root = ReactDOM.createRoot(document.getElementById('root'))
 

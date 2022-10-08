@@ -2,6 +2,12 @@ import React from 'react'
 import logoFooter from '../Assets/logo_footer.png'
 import '../Style/Components/Footer.css'
 
+/**
+ * Composant footer avec logo
+ *
+ * @returns {JSX.Element} composant Footer
+ */
+
 function Footer() {
   return (
     <footer>
