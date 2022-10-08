@@ -2,6 +2,7 @@ import { useState } from 'react'
 import '../Style/Components/Carroussel.css'
 import suivant from '../Assets/suivant.png'
 import precedent from '../Assets/precedent.png'
+import PropTypes from 'prop-types'
 
 function Carroussel({ pictures }) {
   //L'index est à 0
@@ -50,5 +51,10 @@ function Carroussel({ pictures }) {
       {pictures.length > 1 ? navigation() : ''}
     </div>
   )
+}
+
+//typage de la props
+Carroussel.propTypes = {
+  pictures: PropTypes.array.isRequired,
 }
 export default Carroussel

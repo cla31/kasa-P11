@@ -2,8 +2,9 @@ import React from 'react'
 import arrow from '../Assets/arrow.svg'
 import '../Style/Components/Dropdown.css'
 import { useState } from 'react'
+import PropTypes from 'prop-types'
 
-function Dropdown({ title, text, tab }) {
+function Dropdown({ title, text }) {
   const [dropdownOpen, setDropdown] = useState(false)
 
   //Si le dropdown est ouvert on fait tourner arrow
@@ -58,5 +59,10 @@ function Dropdown({ title, text, tab }) {
 //     </ul>
 //   )
 // }
+
+Dropdown.propTypes = {
+  title: PropTypes.string.isRequired,
+  text: PropTypes.any,
+}
 
 export default Dropdown

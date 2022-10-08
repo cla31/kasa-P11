@@ -2,6 +2,7 @@ import React from 'react'
 import likeStar from '../Assets/likeStar.png'
 import greyStar from '../Assets/greyStar.png'
 import '../Style/Components/Rating.css'
+import PropTypes from 'prop-types'
 
 function Rating({ stars }) {
   const totalStars = [1, 2, 3, 4, 5]
@@ -21,4 +22,7 @@ function Rating({ stars }) {
   )
 }
 
+Rating.propTypes = {
+  stars: PropTypes.string.isRequired,
+}
 export default Rating
