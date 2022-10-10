@@ -9,7 +9,7 @@ import PropTypes from 'prop-types'
  */
 
 function Tag({ tagsNom }) {
-  return <p className="tag">{tagsNom}</p>
+  return <div className="tag">{tagsNom}</div>
 }
 Tag.propTypes = {
   tagsNom: PropTypes.object.isRequired,

@@ -9,14 +9,25 @@
     margin-right: 10px;
     width: 150px;
     height: 25px;
+    /* border: blue solid 2px; */
 }
 
-@media screen and (max-width:375px) {}
+@media screen and (min-width: 376px) and (max-width: 768px) {
+    .tag {
+        margin-bottom: 5px;
+        width: 150px;
+        height: 25px;
+        margin-right: 3px;
+    }
+}
 
-.tag {
-    font-size: 10px;
-    width: 108px;
-    margin-bottom: 5px;
-    margin-right: 3px;
-    border-radius: 5px;
+@media screen and (max-width:375px) {
+    .tag {
+        font-size: 10px;
+        /* width: 108px; */
+        margin-bottom: 5px;
+        margin-right: 3px;
+        border-radius: 5px;
+        /* border: blue solid 2px; */
+    }
 }

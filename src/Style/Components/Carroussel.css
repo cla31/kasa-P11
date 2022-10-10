@@ -37,6 +37,7 @@
     }
     .navigation .suivant {
         margin-left: 82%;
+        /* border: 2px solid red; */
     }
     .precedent {
         margin-left: 8px;
@@ -58,7 +59,8 @@
         height: 255px;
     }
     .navigation .suivant {
-        margin-left: 82%;
+        margin-left: 86%;
+        /* border: 2px solid red; */
     }
     .precedent {
         margin-left: 8px;
