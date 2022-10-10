@@ -1,7 +1,7 @@
 import React from 'react'
 import logo from '../Assets/logo_header.png'
 import '../Style/Components/Header.css'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 /**
  * Composant Header avec récupération du Logo et mise en place de la navigation
@@ -13,8 +13,19 @@ const Header = () => {
     <header id="header">
       <img src={logo} alt="logo" />
       <nav>
-        <Link to="/">Accueil</Link>
-        <Link to="/Apropos">A Propos</Link>
+        <NavLink
+          to="/"
+          className={(Home) => (Home.isActive ? 'active' : '')}
+          end
+        >
+          Accueil
+        </NavLink>
+        <NavLink
+          to="/Apropos"
+          className={(Apropos) => (Apropos.isActive ? 'active' : '')}
+        >
+          À Propos
+        </NavLink>
       </nav>
     </header>
   )
