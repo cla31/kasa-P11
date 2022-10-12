@@ -5,6 +5,7 @@ import Banniere from '../Components/Banniere'
 import Photo from '../Assets/banniere_accueil.png'
 import { Link } from 'react-router-dom'
 import Appartements from '../Services/appartementsService.js'
+import Loader from '../Components/Loader'
 
 /**
  * Page d'accueil (Home) appelant les composants Banniere et Gallery dans un template HTML
@@ -16,13 +17,15 @@ const Home = () => {
   const [datas, setDatas] = useState([])
   const [isLoading, setIsloading] = useState(true)
   useEffect(() => {
-    const getAllApparts = async () => {
-      const gallery = await Appartements()
-      setDatas(gallery)
-      // console.log('Gallerie', Gallery)
-    }
-    getAllApparts()
-    setIsloading(false)
+    setTimeout(() => {
+      const getAllApparts = async () => {
+        const gallery = await Appartements()
+        setDatas(gallery)
+        // console.log('Gallerie', Gallery)
+      }
+      getAllApparts()
+      setIsloading(false)
+    }, 3000)
   }, [])
   //On peut mettre plusieurs useEffect
   // useEffect(() => {
@@ -50,15 +53,17 @@ const Home = () => {
       </div> */}
       {/* https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Operators/Optional_chaining */}
       <div className="GalleryLogements">
-        {isLoading
-          ? 'Loading...'
-          : datas?.map(({ title, cover, id }) => {
-              return (
-                <Link to={`/logement/${id}`} key={`${title}-${id}`}>
-                  <Gallery title={title} cover={cover}></Gallery>
-                </Link>
-              )
-            })}
+        {isLoading ? (
+          <Loader />
+        ) : (
+          datas?.map(({ title, cover, id }) => {
+            return (
+              <Link to={`/logement/${id}`} key={`${title}-${id}`}>
+                <Gallery title={title} cover={cover}></Gallery>
+              </Link>
+            )
+          })
+        )}
       </div>
     </div>
   )
