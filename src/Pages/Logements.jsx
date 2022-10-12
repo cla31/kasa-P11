@@ -13,7 +13,7 @@ import Appartement from '../Services/appartementsService'
  * @returns {JSX.Element} Composant Logement
  */
 
-function Logement() {
+const Logement = () => {
   const { logementId } = useParams()
   // console.log('id du logement', logementId)
   const navigate = useNavigate()

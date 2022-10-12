@@ -8,7 +8,7 @@ import PropTypes from 'prop-types'
  * @param {string} [Props.stars='']
  * @returns {JSX.Element} Composant Stars
  */
-function Rating({ stars }) {
+const Rating = ({ stars }) => {
   const totalStars = [1, 2, 3, 4, 5]
   const usersRating = stars
 

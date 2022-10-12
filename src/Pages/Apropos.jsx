@@ -9,7 +9,7 @@ import '../Style/Pages/Apropos.css'
  *
  * @returns {JSX.Element} Composant Apropos
  */
-export default function Apropos() {
+const Apropos = () => {
   return (
     <div>
       <Banniere photo={Photo} description={'Vue sur une chaîne de montagnes'} />
@@ -37,3 +37,4 @@ export default function Apropos() {
     </div>
   )
 }
+export default Apropos

@@ -8,7 +8,7 @@ import PropTypes from 'prop-types'
  * @param {String} [props.description='']
  * @returns {JSX.Element} Composant Banniere
  */
-function Banniere({ photo, title, description }) {
+const Banniere = ({ photo, title, description }) => {
   return (
     <div className="banniere">
       <img src={photo} alt={description} />

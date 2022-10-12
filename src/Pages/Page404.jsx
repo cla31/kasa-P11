@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
  * @returns {JSX.Element} Composant Page404
  */
 
-function Page404() {
+const Page404 = () => {
   return (
     <div>
       <div className="message-erreur">

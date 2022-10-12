@@ -10,7 +10,7 @@ import PropTypes from 'prop-types'
  * @param {String} [Props.title='']
  * @returns {JSX.Element} Composant Dropdown
  */
-function Dropdown({ title, text }) {
+const Dropdown = ({ title, text }) => {
   const [dropdownOpen, setDropdown] = useState(false)
 
   //Si le dropdown est ouvert on fait tourner arrow

@@ -8,7 +8,7 @@ import '../Style/Components/Footer.css'
  * @returns {JSX.Element} composant Footer
  */
 
-function Footer() {
+const Footer = () => {
   return (
     <footer>
       <img src={logoFooter} alt="logo en noir" />

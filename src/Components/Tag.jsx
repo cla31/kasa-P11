@@ -8,7 +8,7 @@ import PropTypes from 'prop-types'
  * @returns {JSX.Element} Composant Tags
  */
 
-function Tag({ tagsNom }) {
+const Tag = ({ tagsNom }) => {
   return <div className="tag">{tagsNom}</div>
 }
 Tag.propTypes = {

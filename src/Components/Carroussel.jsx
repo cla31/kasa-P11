@@ -10,7 +10,7 @@ import PropTypes from 'prop-types'
  * @returns {JSX.Element} Composant Carroussel
  */
 
-function Carroussel({ pictures }) {
+const Carroussel = ({ pictures }) => {
   //L'index est à 0
   //pictures.length = 6 photos par expl
   //photo 1 = index 0

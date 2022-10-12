@@ -25,7 +25,7 @@ const Home = () => {
       }
       getAllApparts()
       setIsloading(false)
-    }, 3000)
+    }, 2000)
   }, [])
   //On peut mettre plusieurs useEffect
   // useEffect(() => {
