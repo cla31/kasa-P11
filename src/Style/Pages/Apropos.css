@@ -2,6 +2,10 @@
     border: 2px solid blue;
 } */
     
+    .apropos {
+        margin-bottom: 180px;
+    }
+    
     .apropos .dropdown {
         width: 70%;
         margin-top: 15px;

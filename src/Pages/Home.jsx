@@ -13,7 +13,7 @@ import Appartements from '../Services/appartementsService.js'
  */
 
 const Home = () => {
-  const [datas, setDatas] = useState(null)
+  const [datas, setDatas] = useState([])
   const [isLoading, setIsloading] = useState(true)
   useEffect(() => {
     const getAllApparts = async () => {
@@ -24,6 +24,10 @@ const Home = () => {
     getAllApparts()
     setIsloading(false)
   }, [])
+  //On peut mettre plusieurs useEffect
+  // useEffect(() => {
+  //   console.log(datas)
+  // }, [datas])
 
   return (
     <div className="Home">
@@ -44,6 +48,7 @@ const Home = () => {
           )
         })}
       </div> */}
+      {/* https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Operators/Optional_chaining */}
       <div className="GalleryLogements">
         {isLoading
           ? 'Loading...'

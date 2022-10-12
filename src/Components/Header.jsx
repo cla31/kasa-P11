@@ -14,15 +14,15 @@ const Header = () => {
       <img src={logo} alt="logo" />
       <nav>
         <NavLink
-          to="/"
           className={(Home) => (Home.isActive ? 'active' : '')}
+          to="/"
           end
         >
           Accueil
         </NavLink>
         <NavLink
-          to="/Apropos"
           className={(Apropos) => (Apropos.isActive ? 'active' : '')}
+          to="/Apropos"
         >
           À Propos
         </NavLink>
