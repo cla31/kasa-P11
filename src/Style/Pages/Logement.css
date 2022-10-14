@@ -190,6 +190,10 @@
         flex-direction: column;
         /* border: 2px solid blue; */
     }
+    .listItem {
+        width: 90%;
+        /* border: 2px solid red; */
+    }
     .description,
     .equipements {
         width: 100%;

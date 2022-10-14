@@ -1,10 +1,13 @@
 import React from 'react'
-import Ball from '../Assets/Ball.gif'
+import BallGrey from '../Assets/Ball-back-grey.gif'
 
 const Loader = () => {
   return (
-    <div>
-      <img src={Ball} alt="Loader en attente du chargement des données"></img>
+    <div className="loader">
+      <img
+        src={BallGrey}
+        alt="Loader en attente du chargement des données"
+      ></img>
     </div>
   )
 }
