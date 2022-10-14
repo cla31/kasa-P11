@@ -39,9 +39,6 @@
 }
 
 @media screen and (max-width:375px) {
-    /* .dropdown {
-        width: 80%;
-    } */
     .titre-dropdown {
         height: 30px;
         /* width: 80%; */

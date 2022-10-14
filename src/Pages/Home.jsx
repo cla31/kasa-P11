@@ -41,16 +41,6 @@ const Home = () => {
           "Photo de la bannière en page d'accueil, vagues et criques sauvages"
         }
       />
-
-      {/* <div className="GalleryLogements">    
-        {getDatasLogements().map(({ title, cover, id }) => {
-          return (
-            <Link to={`/logement/${id}`} key={id}>
-              <Gallery title={title} cover={cover}></Gallery>
-            </Link>
-          )
-        })}
-      </div> */}
       {/* https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Operators/Optional_chaining */}
       <div className="GalleryLogements">
         {isLoading ? (

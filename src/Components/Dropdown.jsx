@@ -35,36 +35,11 @@ const Dropdown = ({ title, text }) => {
           onClick={() => setDropdown(true)}
         />
       </div>
-      {/* {console.log('', typeof text)}
-      {dropdownOpen &&
-        (typeof text === 'object' ? tabEquipement(text) : <p>{text}</p>)} */}
+
       {dropdownOpen && <div className="paragraphe">{text}</div>}
-      {/* {dropdownOpen &&
-        { text }.map((elt) => (
-          <ul>
-            <li>{elt}</li>{' '}
-          </ul>
-        ))} */}
     </div>
   )
 }
-
-// {dropdownOpen &&
-//   { text }.map((elt) => (
-//     <ul>
-//       <li>{elt}</li>{' '}
-//     </ul>
-//   ))}
-
-// function tabEquipement(tab) {
-//   return (
-//     <ul>
-//       {tab.map((equipment, index) => (
-//         <li key={index}>{equipment}</li>
-//       ))}
-//     </ul>
-//   )
-// }
 
 Dropdown.propTypes = {
   title: PropTypes.string.isRequired,
